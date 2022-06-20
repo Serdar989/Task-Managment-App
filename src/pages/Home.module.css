@@ -1,0 +1,67 @@
+.homeBackground {
+  padding: 50px 30px;
+  display: grid;
+
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.homeDescription {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  z-index: 1000;
+  width: 190px;
+  background: #2061c1;
+  text-align: center;
+  height: 190px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.imageHolder {
+  background: url('../assets/jpg/office.jpg') no-repeat;
+  background-size: cover;
+  width: 570px;
+  height: 570px;
+  border-radius: 50%;
+  background-position: top right;
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 2;
+}
+.taskText {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  z-index: 1000;
+  width: 190px;
+  background: #2061c1;
+  text-align: center;
+  height: 190px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #fff;
+}
+@media only screen and (max-width: 900px) {
+  .imageHolder {
+    width: 300px;
+    height: 300px;
+  }
+  .homeDescription {
+    width: 100px;
+    font-size: 0.8rem;
+    height: 100px;
+  }
+  .taskText {
+    width: 100px;
+    font-size: 0.8rem;
+    height: 100px;
+  }
+}

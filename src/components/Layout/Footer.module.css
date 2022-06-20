@@ -1,0 +1,15 @@
+.footer {
+  background: #2061c1;
+  grid-row: 3/4;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  z-index: 1000;
+  width: 100%;
+}
+@media only screen and (max-width: 900px) {
+  .footer {
+    font-size: 12px;
+  }
+}

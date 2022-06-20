@@ -1,0 +1,17 @@
+.taskItem {
+  margin-bottom: 15px;
+  background: #cfe2ff;
+  padding: 10px 5px;
+}
+.taskItem svg {
+  fill: #000;
+  width: 14px;
+  height: 14px;
+}
+.taskDesc {
+  padding-bottom: 5px;
+  color: #000;
+}
+.taskDesc span {
+  color: #2061c1;
+}

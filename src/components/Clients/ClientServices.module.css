@@ -1,0 +1,35 @@
+.tasksContainer {
+  border-radius: 6px;
+  background-color: #2061c1;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 20%);
+  padding: 2rem;
+  text-align: center;
+  color: white;
+}
+.logoImgContainer {
+  margin-bottom: 20px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logoImg {
+  max-width: 100%;
+  height: 80px;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 900px) {
+  .logoImgContainer {
+    width: auto;
+    height: 40px;
+    margin-top: 5px;
+  }
+  .logoImg {
+    height: 40px;
+  }
+}
+.tasksContainer h1 {
+  margin-bottom: 20px;
+  color: #88dfdf;
+}

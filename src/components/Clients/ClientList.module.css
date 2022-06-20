@@ -1,0 +1,24 @@
+table th {
+  padding: 10px 20px;
+}
+thead tr th {
+  color: #000;
+}
+table td,
+table th {
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+}
+tbody tr:nth-child(even) {
+  background: #fff;
+  color: #000 !important;
+}
+tbody tr:nth-child(even) path {
+  fill: #000;
+}
+
+tbody tr:nth-child(even) td,
+tbody tr:nth-child(even) th {
+  color: #000 !important;
+}
