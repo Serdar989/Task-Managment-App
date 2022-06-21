@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import NotFound from '../../pages/NotFound';
 import useHttp from '../../hooks/use-http';
 import { editClientHandler } from '../../lib/api';
 import { useParams } from 'react-router-dom';
@@ -39,13 +38,6 @@ const EditClientForm = (props) => {
 
   if (error) {
     return <p>{error}</p>;
-  }
-
-  if (
-    status === 'completed' &&
-    (!props.loadedClient || props.loadedClient.length === 0)
-  ) {
-    return <NotFound />;
   }
 
   const submitHandler = (form, companyLogo, event) => {
