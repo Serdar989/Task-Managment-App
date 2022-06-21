@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { storage } from '../firebase';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
@@ -15,7 +15,7 @@ function Form(props) {
     props.companyLogo !== undefined ? 'Edit Client' : 'Add Client';
 
   const [logoUpload, setlogoUpload] = useState(null);
-  const [loading, setLoading] = useState(true);
+
   const [form, setForm] = useState(initialValues);
   const [companyLogo, setCompanyLogo] = useState(propValue);
 
@@ -36,7 +36,6 @@ function Form(props) {
 
   const handleUpload = (event) => {
     event.preventDefault();
-    setLoading(true);
 
     if (logoUpload == null) return;
     const imageRef = ref(storage, `images/${logoUpload.name}`);
@@ -46,10 +45,6 @@ function Form(props) {
       });
     });
   };
-
-  useEffect(() => {
-    setLoading(false);
-  }, [companyLogo]);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -66,7 +61,6 @@ function Form(props) {
             handleChange,
             handleUpload,
             companyLogo,
-            loading,
           }}
         >
           {children}

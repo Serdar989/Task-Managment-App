@@ -74,8 +74,10 @@ const EditClientForm = (props) => {
         <FormInput label='Email' type='email' name='enteredEmail' />
         <FormInput
           label='Contact Number'
-          type='text'
+          type='tel'
           name='enteredContactNumber'
+          placeholder='064-4512-678'
+          pattern='[0-9]{3}-[0-9]{4}-[0-9]{3}'
         />
         <FormInput label='Upload Company Logo' type='file' name='logoUpload' />
       </Form>

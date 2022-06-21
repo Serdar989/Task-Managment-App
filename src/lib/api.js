@@ -43,7 +43,6 @@ export async function getSingleClient(clientId) {
 }
 
 export async function addClient(clientData) {
-  console.log('data je ' + JSON.stringify(clientData));
   const response = await fetch(`${FIREBASE_DOMAIN}/clients.json`, {
     method: 'POST',
     body: JSON.stringify(clientData),

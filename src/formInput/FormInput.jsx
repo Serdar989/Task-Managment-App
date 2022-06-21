@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
 import { FormContext } from '../store/input-context';
 import '../index.css';
-import LoadingSpinner from '../components/UI/LoadingSpinner';
 
 function FormInput(props) {
-  const { label, type = 'text', name } = props;
+  const { label, type = 'text', name, placeholder, pattern } = props;
 
   const formContext = useContext(FormContext);
   const {
@@ -13,19 +12,11 @@ function FormInput(props) {
     handleChange,
     handleUpload,
     companyLogo,
-    loading,
   } = formContext;
 
-  console.log('url za image je ' + companyLogo);
-
   let imageContent;
-  if (loading) {
-    imageContent = (
-      <div className='centered'>
-        <LoadingSpinner />
-      </div>
-    );
-  } else if (companyLogo && !loading) {
+
+  if (companyLogo) {
     imageContent = (
       <div className='logoImgContainer'>
         <img className='logoImg' src={companyLogo} alt='logo' />
@@ -57,6 +48,8 @@ function FormInput(props) {
             name={name}
             value={form[name]}
             onChange={handleFormChange}
+            placeholder={placeholder}
+            pattern={pattern}
           />
         </>
       )}
