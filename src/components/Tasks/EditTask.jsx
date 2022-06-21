@@ -20,7 +20,7 @@ const EditTask = (props) => {
   const { sendRequest, data: loadedTask, status, error } = useHttp(
     getSingleTask
   );
-
+  console.log('test promena');
   useEffect(() => {
     const controller = new AbortController();
     sendRequest({ clientsId: clientsId, taskId: taskId });
