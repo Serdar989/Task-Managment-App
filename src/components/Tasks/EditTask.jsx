@@ -8,8 +8,6 @@ import EditTaskForm from './EditTaskForm';
 import NotFound from '../../pages/NotFound';
 
 const EditTask = (props) => {
-  useEffect(() => {});
-
   const navigate = useNavigate();
 
   const params = useParams();
@@ -61,7 +59,15 @@ const EditTask = (props) => {
     content = <EditTaskForm loadedTask={loadedTask} onEditTask={editedTask} />;
   }
 
-  return <>{content}</>;
+  return (
+    <>
+      {' '}
+      <div className='auth'>
+        <h1>Edit Task</h1>
+        {content}
+      </div>
+    </>
+  );
 };
 
 export default EditTask;

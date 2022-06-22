@@ -48,7 +48,11 @@ function Form(props) {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    submit(form, companyLogo, e);
+    if (companyLogo !== undefined || companyLogo === '') {
+      submit(form, e, companyLogo);
+    } else {
+      submit(form, e);
+    }
   };
 
   return (

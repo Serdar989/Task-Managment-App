@@ -11,7 +11,8 @@ const NewClientForm = (props) => {
     enteredContactNumber: '',
   };
 
-  const submitHandler = (form, companyLogo) => {
+  const submitHandler = (form, event, companyLogo) => {
+    event.preventDefault();
     const clientData = {
       company: form.enteredCompany,
       location: form.enteredLocation,
@@ -34,6 +35,7 @@ const NewClientForm = (props) => {
           label='Contact Number'
           type='text'
           name='enteredContactNumber'
+          placeholder='064-4512-678'
         />
         <FormInput label='Upload Company Logo' type='file' name='logoUpload' />
       </Form>

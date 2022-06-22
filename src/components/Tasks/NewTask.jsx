@@ -26,26 +26,29 @@ const NewTask = (props) => {
     sendRequest({ taskData: clientData, clientsId: clientsId });
   };
 
+  let content;
+
   if (status === 'pending') {
-    return (
+    content = (
       <div className='centered'>
         <LoadingSpinner />
       </div>
     );
   }
+
   if (error) {
-    return <p>{error}</p>;
+    content = <p>{error}</p>;
   }
 
+  content = <NewTaskForm onAddTask={saveTaskHandler} />;
+
   return (
-    <div className='auth'>
-      <h1>New Task</h1>
-      <NewTaskForm
-        loading={status === 'pending'}
-        error={error}
-        onAddTask={saveTaskHandler}
-      />
-    </div>
+    <>
+      <div className='auth'>
+        <h1>New Task</h1>
+        {content}
+      </div>
+    </>
   );
 };
 

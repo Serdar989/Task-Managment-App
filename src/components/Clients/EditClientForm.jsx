@@ -40,7 +40,7 @@ const EditClientForm = (props) => {
     return <p>{error}</p>;
   }
 
-  const submitHandler = (form, companyLogo, event) => {
+  const submitHandler = (form, event, companyLogo) => {
     event.preventDefault();
     const clientData = {
       company: form.enteredCompany,
@@ -69,7 +69,6 @@ const EditClientForm = (props) => {
           type='tel'
           name='enteredContactNumber'
           placeholder='064-4512-678'
-          pattern='[0-9]{3}-[0-9]{4}-[0-9]{3}'
         />
         <FormInput label='Upload Company Logo' type='file' name='logoUpload' />
       </Form>
