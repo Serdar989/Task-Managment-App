@@ -36,6 +36,8 @@ const EditClientForm = (props) => {
   };
   let companyLogo = props.loadedClient.companyLogo;
 
+  const typeOfForm = 'editClientForm';
+
   if (error) {
     return <p>{error}</p>;
   }
@@ -59,6 +61,7 @@ const EditClientForm = (props) => {
         submit={submitHandler}
         initialValues={initialValues}
         companyLogo={companyLogo}
+        typeOfForm={typeOfForm}
       >
         <FormInput label='Company' type='text' name='enteredCompany' />
         <FormInput label='Location' type='text' name='enteredLocation' />

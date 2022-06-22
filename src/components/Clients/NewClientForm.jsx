@@ -11,6 +11,8 @@ const NewClientForm = (props) => {
     enteredContactNumber: '',
   };
 
+  const typeOfForm = 'newClientForm';
+
   const submitHandler = (form, event, companyLogo) => {
     event.preventDefault();
     const clientData = {
@@ -26,7 +28,11 @@ const NewClientForm = (props) => {
 
   return (
     <>
-      <Form submit={submitHandler} initialValues={initialValues}>
+      <Form
+        submit={submitHandler}
+        initialValues={initialValues}
+        typeOfForm={typeOfForm}
+      >
         <FormInput label='Company' type='text' name='enteredCompany' />
         <FormInput label='Location' type='text' name='enteredLocation' />
         <FormInput label='Client Name' type='text' name='enteredClientName' />

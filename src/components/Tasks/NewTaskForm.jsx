@@ -13,6 +13,8 @@ const NewTaskForm = (props) => {
     enteredPaymanetMade: '',
   };
 
+  const typeOfForm = 'newTaskForm';
+
   const submitHandler = (form, e) => {
     e.preventDefault();
 
@@ -25,13 +27,17 @@ const NewTaskForm = (props) => {
       note: form.enteredNote,
       paymanetMade: form.enteredPaymanetMade,
     };
-    console.log('task tad aje ' + taskData);
+
     props.onAddTask(taskData);
   };
 
   return (
     <>
-      <Form submit={submitHandler} initialValues={initialValues}>
+      <Form
+        submit={submitHandler}
+        initialValues={initialValues}
+        typeOfForm={typeOfForm}
+      >
         <FormInput label='Date' type='date' name='enteredDate' />
         <FormInput
           label='Job Description'
@@ -57,7 +63,7 @@ const NewTaskForm = (props) => {
         <FormInput
           label='Paymanet Made'
           type='checkbox'
-          name='paymanetMadeChangeHandler'
+          name='enteredPaymanetMade'
         />
       </Form>
     </>

@@ -32,7 +32,7 @@ const ProfileForm = () => {
       navigate('/');
     });
   };
-  console.log(authCtx);
+
   return (
     <form className={classes.form} onSubmit={submitHandler}>
       <h2>User Email: {authCtx.email}</h2>

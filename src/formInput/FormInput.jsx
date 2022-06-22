@@ -47,6 +47,7 @@ function FormInput(props) {
             type={type}
             name={name}
             value={form[name]}
+            checked={form[name]}
             onChange={handleFormChange}
             placeholder={placeholder}
             pattern={pattern}

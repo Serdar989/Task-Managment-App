@@ -7,12 +7,30 @@ export const FormContext = React.createContext({
 });
 
 function Form(props) {
-  const { children, submit = () => {}, initialValues } = props;
+  const { children, submit = () => {}, initialValues, typeOfForm } = props;
 
   let propValue = props.companyLogo !== undefined ? props.companyLogo : '';
 
-  const buttonText =
-    props.companyLogo !== undefined ? 'Edit Client' : 'Add Client';
+  let buttonText = '';
+
+  switch (typeOfForm) {
+    case 'newTaskForm':
+      buttonText = 'Add Task';
+      break;
+    case 'editTaskForm':
+      buttonText = 'Edit Task';
+      break;
+    case 'newClientForm':
+      buttonText = 'New Client';
+      break;
+    case 'editClientForm':
+      buttonText = 'Edit Client';
+      break;
+
+    default:
+      buttonText = '';
+      break;
+  }
 
   const [logoUpload, setlogoUpload] = useState(null);
 
@@ -20,11 +38,11 @@ function Form(props) {
   const [companyLogo, setCompanyLogo] = useState(propValue);
 
   const handleFormChange = (event) => {
-    const { name, value } = event.target;
-
+    const { name, value, checked } = event.target;
+    const enteredValue = name === 'enteredPaymanetMade' ? checked : value;
     setForm({
       ...form,
-      [name]: value,
+      [name]: enteredValue,
     });
   };
 

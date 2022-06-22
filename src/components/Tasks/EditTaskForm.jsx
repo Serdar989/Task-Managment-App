@@ -37,6 +37,8 @@ const EditTaskForm = (props) => {
     enteredPaymanetMade: props.loadedTask.paymanetMade,
   };
 
+  const typeOfForm = 'editTaskForm';
+
   if (status === 'pending') {
     return (
       <div className='centered'>
@@ -65,7 +67,11 @@ const EditTaskForm = (props) => {
 
   return (
     <>
-      <Form submit={submitHandler} initialValues={initialValues}>
+      <Form
+        submit={submitHandler}
+        initialValues={initialValues}
+        typeOfForm={typeOfForm}
+      >
         <FormInput label='Date' type='date' name='enteredDate' />
         <FormInput
           label='Job Description'
@@ -91,7 +97,7 @@ const EditTaskForm = (props) => {
         <FormInput
           label='Paymanet Made'
           type='checkbox'
-          name='paymanetMadeChangeHandler'
+          name='enteredPaymanetMade'
         />
       </Form>
     </>
