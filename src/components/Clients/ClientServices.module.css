@@ -5,6 +5,7 @@
   padding: 2rem;
   text-align: center;
   color: white;
+  margin: 100px 30px;
 }
 .logoImgContainer {
   margin-bottom: 20px;
@@ -32,4 +33,10 @@
 .tasksContainer h1 {
   margin-bottom: 20px;
   color: #88dfdf;
+}
+@media only screen and (max-width: 768px) {
+  .tasksContainer {
+    padding: 1rem;
+    margin: 50px 0px;
+  }
 }

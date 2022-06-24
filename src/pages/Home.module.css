@@ -1,7 +1,6 @@
 .homeBackground {
   padding: 50px 30px;
   display: grid;
-
   justify-content: center;
   align-items: center;
   grid-template-columns: 1fr 1fr;
@@ -49,7 +48,35 @@
   font-size: 1.5rem;
   color: #fff;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 640px) {
+  .homeBackground {
+    padding: 30px 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .imageHolder {
+    width: 420px;
+    height: 420px;
+  }
+  .homeDescription {
+    width: 120px;
+    font-size: 1.2rem;
+    height: 120px;
+  }
+  .taskText {
+    width: 120px;
+    font-size: 1.2rem;
+    height: 120px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
   .imageHolder {
     width: 300px;
     height: 300px;
@@ -63,5 +90,22 @@
     width: 100px;
     font-size: 0.8rem;
     height: 100px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .imageHolder {
+    width: 280px;
+    height: 280px;
+  }
+  .homeDescription {
+    width: 90px;
+    font-size: 0.8rem;
+    height: 90px;
+  }
+  .taskText {
+    width: 90px;
+    font-size: 0.8rem;
+    height: 90px;
   }
 }

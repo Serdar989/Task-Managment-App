@@ -28,18 +28,19 @@ const AllClients = () => {
   );
 
   const pageText = 'Clients not found';
-
+  const buttonElemet = (
+    <div className='btn btn-light'>
+      <Link to='new-client'> Add New Client</Link>
+    </div>
+  );
   if (
     status === 'completed' &&
     (!loadedClients || loadedClients.length === 0)
   ) {
     return (
-      <>
-        <NotFound pageText={pageText} />
-        <div className='btn btn-light'>
-          <Link to='new-client'>New Client</Link>
-        </div>
-      </>
+      <div>
+        <NotFound buttonElemet={buttonElemet} pageText={pageText} />
+      </div>
     );
   }
 
@@ -60,7 +61,7 @@ const AllClients = () => {
         <h1>Client List</h1>
         <ClientList clients={loadedClients} removeClient={removeClient} />
         <div className='btn btn-light'>
-          <Link to='new-client'>New Client</Link>
+          <Link to='new-client'>Add New Client</Link>
         </div>
       </div>
     );

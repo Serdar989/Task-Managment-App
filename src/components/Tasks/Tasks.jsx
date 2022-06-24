@@ -60,9 +60,9 @@ const Tasks = () => {
   if (error) {
     content = <p>{error}</p>;
   }
-
+  const taskPage = true;
   if (status === 'completed' && (!loadedTasks || loadedTasks.length === 0)) {
-    content = <NotFound pageText={pageText} />;
+    content = <NotFound taskPage={taskPage} pageText={pageText} />;
   }
 
   if (
@@ -122,7 +122,7 @@ const Tasks = () => {
       {content}
 
       <div className='btn btn-light'>
-        <Link to={`/clients/${clientsId}/new-task`}>Add Task</Link>
+        <Link to={`/clients/${clientsId}/new-task`}>Add New Task</Link>
       </div>
     </div>
   );

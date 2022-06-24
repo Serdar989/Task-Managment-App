@@ -12,6 +12,11 @@
     padding: 2rem;
   }
 }
+@media only screen and (max-width: 350px) {
+  .profile {
+    padding: 1.2rem;
+  }
+}
 .profile h1 {
   margin-bottom: 20px;
   color: #88dfdf;

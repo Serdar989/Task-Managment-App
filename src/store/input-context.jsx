@@ -15,13 +15,13 @@ function Form(props) {
 
   switch (typeOfForm) {
     case 'newTaskForm':
-      buttonText = 'Add Task';
+      buttonText = 'Add New Task';
       break;
     case 'editTaskForm':
       buttonText = 'Edit Task';
       break;
     case 'newClientForm':
-      buttonText = 'New Client';
+      buttonText = 'Add New Client';
       break;
     case 'editClientForm':
       buttonText = 'Edit Client';

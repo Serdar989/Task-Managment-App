@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import ClientItem from './ClientItem';
 import './ClientList.module.css';
+import classes from './ClientList.module.css';
 
 const ClientList = (props) => {
   const [matchesMobile, setMatchesMobile] = useState(
@@ -51,7 +52,7 @@ const ClientList = (props) => {
     );
   } else if (matchesMobile) {
     content = (
-      <div>
+      <div className={classes.clientBoxContainer}>
         {props.clients.map((client) => (
           <ClientItem
             key={client.id}
