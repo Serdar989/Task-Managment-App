@@ -5,6 +5,8 @@
   padding: 5rem;
   text-align: center;
   color: white;
+  margin: 100px 30px;
+  min-width: 620px;
 }
 
 @media only screen and (max-width: 900px) {
@@ -36,9 +38,15 @@
   color: #38015c;
   border-radius: 4px;
   border: 1px solid white;
-  width: 100%;
+  width: 60%;
   text-align: left;
   padding: 0.25rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .control input {
+    width: 90%;
+  }
 }
 
 .invalid label {

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import classes from './AuthForm.module.css';
 import AuthContext from '../../store/auth-context';
 import useInput from '../../hooks/use-input';
+import '../../index.css';
 
 const isSixChars = (value) => value.trim().length > 6 && value.trim() !== '';
 
@@ -105,7 +106,7 @@ const AuthForm = () => {
   }`;
 
   return (
-    <section className={classes.auth}>
+    <section className='auth'>
       <h1>{isLogin ? 'Please Login' : 'Please Sign Up'}</h1>
       <form onSubmit={submitHandler}>
         <div className={emailControlClasses}>

@@ -326,6 +326,9 @@ h3 {
   .auth {
     min-width: 460px;
   }
+  /* .auth input {
+    width: 90%;
+  } */
 }
 @media only screen and (max-width: 500px) {
   .auth {
